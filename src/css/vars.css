@@ -1,0 +1,26 @@
+:root {
+  /* colors */
+  --backgroundColor: #f9d2cb;
+  --backgroundButton: #a3f4dc;
+  --textColor: #212121;
+  --buttonColor: #3f1d1d;
+  --priceColor: #9c9c9c;
+  --anotherColor: #bada55;
+  --backgroundPrice: white;
+  /* font sizes */
+  --fontSmall: 1.2rem;
+  --fontMedium: 1.8rem;
+  --fontButton: 2.4rem;
+  --fontBig: 2.6rem;
+  /* font family */
+  --roboto: 'roboto', sans serif;
+  --fontWeightBold: 500;
+  --fontWeightNormal: normal;
+  /* line height */
+  --lineHeightSmall: 1.4rem;
+  --lineHeightMedium: 2.1rem;
+  --lineHeightBig: 2.8rem;
+  /* media queries */
+  @custom-media --only-mobile-screen (width >= 300px) and (width <= 800px);
+  @custom-media --only-tablet-screen (width >= 801px) and (width <= 1200px);
+}

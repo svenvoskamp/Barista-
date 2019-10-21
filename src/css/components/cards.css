@@ -1,0 +1,60 @@
+.prices {
+  height: 16.8rem;
+  background-color: var(--backgroundColor);
+}
+
+.prices__list {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'price1 price2'
+    'price3 price4';
+  grid-gap: 1.1rem;
+}
+
+.price {
+  grid-area: price1;
+  background-color: var(--backgroundPrice);
+  width: auto;
+  height: 6.3rem;
+  border-radius: .6rem;
+}
+
+.price:nth-child(even) {
+  margin: 0 3rem 0 0;
+}
+
+.price:nth-child(odd) {
+  margin: 0 0 0 3rem;
+}
+
+.price:nth-child(2) {
+  grid-area: price2;
+}
+
+.price:nth-child(3) {
+  grid-area: price3;
+}
+
+.price:nth-child(4) {
+  grid-area: price4;
+}
+
+.price__button {
+  display: flex;
+  justify-content: space-around;
+}
+
+.price__button__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.2rem;
+}
+
+.price__button__amount {
+  margin-top: .4rem;
+}
+
+.price__button__plus {
+  margin-top: 2rem;
+}

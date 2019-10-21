@@ -1,0 +1,36 @@
+.h2-like, .h1-like, span {
+  font-family: var(--roboto);
+  color: var(--textColor);
+}
+
+.h2-like {
+  font-size: var(--fontSmall);
+  line-height: var(--lineHeightSmall);
+  font-weight: var(--fontWeightNormal);
+  text-transform: uppercase;
+}
+
+.h1-like {
+  font-size: var(--fontBig);
+  font-weight: var(--fontWeightBold);
+  line-height: var(--lineHeightBig);
+  margin: .2rem 0 0 0;
+}
+
+.price__button__name {
+  font-size: var(--fontMedium);
+  font-weight: var(--fontWeightNormal);
+  line-height: var(--lineHeightMedium);
+}
+
+.price__button__amount {
+  color: var(--priceColor);
+  font-weight: var(--fontWeightNormal);
+  font-size: var(--fontSmall);
+}
+
+.price__button__plus {
+  color: var(--buttonColor);
+  font-weight: var(--fontWeightNormal);
+  font-size: var(--fontButton);
+}

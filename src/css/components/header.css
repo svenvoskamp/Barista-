@@ -1,0 +1,17 @@
+header {
+  height: 13.6rem;
+  background-color: var(--backgroundColor);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'title headerImage';
+}
+
+.header__titles {
+  grid-area: title;
+  padding: 3rem 0 0 3rem;
+}
+
+.header__image {
+  grid-area: headerImage;
+  padding: 3rem 4rem 0 0;
+}
