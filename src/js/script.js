@@ -50,12 +50,32 @@
     const $name = $buttonName.textContent;
     const $price = $priceChar.slice(2);
     const $id = $parent.dataset.id;
+
     console.log($id);
     console.log($name);
     console.log($price);
 
+    makeList($name, $price);
+
+
   };
 
+  const makeList = ($name, $price) => {
+    const $orderList = document.querySelector('.orders');
+    const $li = document.createElement(`li`);
+    $li.classList.add(`order`);
+    $li.innerHTML = `
+      <span class="order__name">
+        <span class="order__amount">1x</span> ${$name}
+      </span>
+      <span class="order__price">
+      &euro; ${$price}
+      </span>
+      <button class="remove">
+        x
+      </button>`;
+    $orderList.appendChild($li);
+  };
 
 
 
