@@ -1,4 +1,5 @@
 {
+
   const fetchJSON = () => {
     fetch('../src/assets/data/coffees.json')
       .then(response => {
@@ -6,15 +7,17 @@
       })
       .then(data => {
         console.log(data);
-        // Work with JSON data here
-        //load prices function, the number is how many we want to load
-        loadPrices(data, 5);
+
+        const coffees = data.coffees.filter(function(coffee) {
+          return coffee.plantbased;
+        });
+        console.log(coffees);
+        loadPrices(coffees, 5);
       })
       .catch(err => {});
   };
 
-  const loadPrices = (data, count) => {
-  //For every item a element gets created filled in and appended to the parent
+  const loadPrices = (coffees, count) => {
     for (let i = 0;i <= count - 1;i ++) {
       const $li = document.createElement(`li`);
 
@@ -22,19 +25,44 @@
       $li.setAttribute('data-id', i);
       const $list = document.querySelector(`.prices__list`);
 
-      $li.innerHTML = `<a class="price__button" onclick="addOrder(event)" data-id=${i}">
+      $li.innerHTML = `<a class="price__button" data-id=${i}>
       <span class="price__button__wrapper">
-        <span class="price__button__name">${data['coffees'][i]['name']}</span>
-        <span class="price__button__amount">&euro; ${data['coffees'][i]['prices']['medium']}</span>
+        <span class="price__button__name">${coffees[i]['name']}</span>
+        <span class="price__button__amount">&euro; ${coffees[i]['prices']['medium']}</span>
       </span>
       <span class="price__button__plus">+</span>
       </a>`;
       $list.appendChild($li);
+      const buttons = document.querySelectorAll(`.price__button__plus`);
+      buttons.forEach($click => $click.addEventListener('click', handleClickEvent));
     }
   };
 
+  const orders = [];
+
+  const handleClickEvent = e => {
+    const $child = e.currentTarget;
+    const $parent = $child.parentElement;
+    const $sibling = $parent.firstElementChild;
+    const $buttonName = $sibling.firstElementChild;
+    const $priceChar = $buttonName.nextElementSibling.textContent;
+
+    const $name = $buttonName.textContent;
+    const $price = $priceChar.slice(2);
+    const $id = $parent.dataset.id;
+    console.log($id);
+    console.log($name);
+    console.log($price);
+
+  };
+
+
+
+
+
   const init = () => {
     fetchJSON();
+
   };
 
   init();
