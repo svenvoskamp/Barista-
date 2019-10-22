@@ -1,18 +1,4 @@
 import './style.css';
+import './js/script.js';
+import data from './assets/data/coffees.json';
 
-{
-  const showCoffees = async () => {
-
-    const response = await fetch(`./assets/data/coffees.json`);
-    const coffees = await response.json();
-    console.log(coffees);
-  };
-
-
-  const init = () => {
-    showCoffees();
-  };
-
-  init();
-
-}
