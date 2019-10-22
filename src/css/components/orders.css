@@ -28,12 +28,17 @@
 }
 
 .order {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 6fr .9fr 1fr;
   align-items: center;
+  grid-template-areas: 'coffeeName coffeePrice remove';
   padding-top: 1.6rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #efefef;
+}
+
+.order__name {
+  grid-area: coffeeName;
 }
 
 .order__amount {
@@ -42,11 +47,12 @@
 }
 
 .remove {
-  padding-right: 3rem;
+  grid-area: remove;
+  justify-self: flex-start;
 }
 
 .order__price {
-  padding-left: 16.5rem;
+  grid-area: coffeePrice;
 }
 
 .total {
