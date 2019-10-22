@@ -1,9 +1,9 @@
-.h2-like, .h1-like, span {
+.h2-like, .h1-like, span, .title_mini, .footer__content {
   font-family: var(--roboto);
   color: var(--textColor);
 }
 
-.h2-like {
+.h2-like, .title_mini {
   font-size: var(--fontSmall);
   line-height: var(--lineHeightSmall);
   font-weight: var(--fontWeightNormal);
@@ -14,23 +14,52 @@
   font-size: var(--fontBig);
   font-weight: var(--fontWeightBold);
   line-height: var(--lineHeightBig);
-  margin: .2rem 0 0 0;
+  margin: .2rem 0 0;
 }
 
-.price__button__name {
+.price__button__name, .emptystate__content,
+.order__amount, .order__name,
+.order__price, .remove, .total__label,
+.total__price {
   font-size: var(--fontMedium);
   font-weight: var(--fontWeightNormal);
   line-height: var(--lineHeightMedium);
 }
 
-.price__button__amount {
+.price__button__amount, .footer__content {
   color: var(--priceColor);
   font-weight: var(--fontWeightNormal);
   font-size: var(--fontSmall);
+}
+
+.footer__content {
+  color: #564f4f;
+  font-weight: var(--fontWeightBold);
+}
+
+.active {
+  color: #b7b7b7;
 }
 
 .price__button__plus {
   color: var(--buttonColor);
   font-weight: var(--fontWeightNormal);
   font-size: var(--fontButton);
+}
+
+.emptystate__content {
+  color: #9c9c9c;
+}
+
+.order__amount {
+  color: #f9d2cb;
+  font-weight: var(--fontWeightBold);
+}
+
+.total__label, .total__price {
+  font-weight: var(--fontWeightBold);
+}
+
+.remove {
+  color: rgba(33, 33, 33, .3);
 }

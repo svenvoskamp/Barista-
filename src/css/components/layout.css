@@ -1,0 +1,33 @@
+@media screen and (min-width: 300px) {
+
+  .layout {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'header'
+      'prices'
+      'orders'
+      'orders'
+      'orders'
+      'footer';
+  }
+}
+
+@media screen and (min-width: 800px) {
+
+  .layout {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      'header orders orders'
+      'prices orders orders'
+      'prices orders orders'
+      'prices orders orders'
+      'prices orders orders'
+      'prices orders orders'
+      'footer footer footer';
+  }
+}

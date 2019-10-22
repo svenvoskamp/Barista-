@@ -1,6 +1,8 @@
 .prices {
   height: 16.8rem;
+  grid-area: prices;
   background-color: var(--backgroundColor);
+  padding-top: 1rem;
 }
 
 .prices__list {
@@ -40,6 +42,14 @@
   grid-area: price4;
 }
 
+.price:nth-child(5) {
+  grid-area: price5;
+}
+
+.price:nth-child(6) {
+  grid-area: price6;
+}
+
 .price__button {
   display: flex;
   justify-content: space-around;
@@ -57,4 +67,48 @@
 
 .price__button__plus {
   margin-top: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+
+  .price:nth-child(5) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+
+  .prices__list {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'price1'
+      'price2'
+      'price3'
+      'price4'
+      'price5';
+  }
+
+  .price__button__wrapper {
+    margin-top: .2rem;
+  }
+
+  .price__button__plus {
+    margin-top: 1rem;
+  }
+
+  .price {
+    padding-top: 1.2rem;
+  }
+
+  .price:nth-child(even) {
+    margin: 0 3rem;
+  }
+
+  .price:nth-child(odd) {
+    margin: 0 3rem;
+  }
+
+  .prices {
+    height: auto;
+  }
 }

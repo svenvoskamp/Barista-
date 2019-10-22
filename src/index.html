@@ -46,6 +46,16 @@
             </li>
 
             <li class="price">
+              <a class="price__button">
+                <span class="price__button__wrapper">
+                  <span class="price__button__name">Drink name</span>
+                  <span class="price__button__amount">&euro; 3,00</span>
+                </span>
+                <span class="price__button__plus">+</span>
+              </a>
+            </li>
+
+            <li class="price">
                 <a class="price__button">
                   <span class="price__button__wrapper">
                     <span class="price__button__name">Drink name</span>
@@ -69,26 +79,45 @@
     </section>
     <section class="content spaced">
       <h2 class="title_mini">Order</h2>
-      <div class="orders__wrapper hide">
         <ul class="orders">
-          <!--
-              Order template
+            <!--
               <li class="order">
                 <span class="order__name">
-                  <span class="order__amount">{amount} x</span> {drink.name}
+                  <span class="order__amount">1x</span> Oat Latte
                 </span>
-                <span class="order__price">&euro; {total}</span>
+                <span class="order__price">&euro; 3.50</span>
                 <button class="remove">
                   x
                 </button>
               </li>
-            -->
+
+              <li class="order">
+                <span class="order__name">
+                  <span class="order__amount">1x</span> Oat Latte
+                </span>
+                <span class="order__price">&euro; 3.50</span>
+                <button class="remove">
+                  x
+                </button>
+              </li>
+
+              <li class="order">
+                <span class="order__name">
+                  <span class="order__amount">1x</span> Oat Latte
+                </span>
+                <span class="order__price">&euro; 3.50</span>
+                <button class="remove">
+                  x
+                </button>
+              </li>
         </ul>
         <p class="total">
-          <span class="total__label">Total price</span>
+          <span class="total__label">Total</span>
           <span class="total__price">&euro; <span>0,00</span></span>
         </p>
       </div>
+
+
       <div class="emptystate">
         <img srcset="./assets/img/coffee-maker.jpg 67w,
           ./assets/img/coffee-maker@2x.jpg 134w" sizes="67px" src="./assets/img/coffee-maker.jpg" alt="A coffee maker">
@@ -100,8 +129,28 @@
           </span>
         </span>
       </div>
+        -->
     </section>
+    <footer>
+      <div class="footer__item">
+        <img class = "footer__icon " src="./assets/img/home_icon.png" alt="Home icon">
+        <p class = "footer__content active">Home</p>
+      </div>
+
+      <div class="footer__item">
+        <img class = "footer__icon" src="./assets/img/about_icon.png" alt="About icon">
+        <p class = "footer__content">About</p>
+      </div>
+
+
+      <div class="footer__item">
+        <img class = "footer__icon" src="./assets/img/admin_icon.png" alt="Admin icon">
+        <p class = "footer__content">Admin</p>
+      </div>
+
+    </footer>
   </main>
+
 </body>
 
 </html>

@@ -1,0 +1,19 @@
+footer {
+  background-color: var(--textColor);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: footer;
+}
+
+.footer__icon {
+  margin-bottom: .5rem;
+}
+
+.footer__item:nth-child(1) {
+  padding-left: 2.5rem;
+}
+
+.footer__item:nth-child(3) {
+  padding-right: 2.5rem;
+}

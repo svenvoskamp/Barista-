@@ -1,0 +1,67 @@
+.content {
+  grid-area: orders;
+  display: grid;
+  grid-template-rows: 1fr 7fr 2fr;
+}
+
+@media screen and (min-width: 800px) {
+
+  .content {
+    grid-template-rows: 1fr 6fr 1.2fr;
+  }
+}
+
+.title_mini {
+  padding: 3rem 0 0 3rem;
+}
+
+.emptystate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7.1rem;
+  margin-bottom: 7.5rem;
+}
+
+.emptystate__content {
+  padding-top: 1.5rem;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.6rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #efefef;
+}
+
+.order__amount {
+  padding-left: 3rem;
+  margin-right: 1rem;
+}
+
+.remove {
+  padding-right: 3rem;
+}
+
+.order__price {
+  padding-left: 16.5rem;
+}
+
+.total {
+  border-top: 1px solid #efefef;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.total__label {
+  margin-left: 3rem;
+}
+
+.total__price {
+  margin-right: 3rem;
+}

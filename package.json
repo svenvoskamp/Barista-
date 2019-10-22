@@ -34,5 +34,8 @@
     "last 2 versions",
     "> 1%",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0"
+  }
 }

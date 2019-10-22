@@ -1,9 +1,8 @@
 header {
-  height: 13.6rem;
   background-color: var(--backgroundColor);
   display: grid;
-  grid-template-rows: 1fr 1fr;
   grid-template-areas: 'title headerImage';
+  grid-area: header;
 }
 
 .header__titles {
@@ -14,4 +13,13 @@ header {
 .header__image {
   grid-area: headerImage;
   padding: 3rem 4rem 0 0;
+}
+
+@media screen and (min-width: 800px) {
+
+  .header__image {
+    position: absolute;
+    top: 44rem;
+    left: 5rem;
+  }
 }
