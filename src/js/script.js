@@ -34,7 +34,7 @@
   }
 
   const fetchJSON = () => {
-    fetch('./src/assets/data/coffees.json')
+    fetch('../src/assets/data/coffees.json')
       .then(response => {
         return response.json();
       })
