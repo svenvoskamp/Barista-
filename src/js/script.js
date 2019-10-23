@@ -1,6 +1,7 @@
 {
   const $orders = [];
 
+  const checkEmptyState = () => {
   if (typeof $orders == 'undefined' || $orders.length <= 0) {
     const $orderList = document.querySelector('.orders');
       const $div = document.createElement(`div`);
@@ -17,6 +18,19 @@
       </span>
     `;
     $orderList.appendChild($div);
+  }
+}
+
+  const loadTotal = () => {
+    let total = 0;
+    for (let i = 0; i <= $orders.length - 1; i++ ) {
+      let currentItemPrice = $orders[i].price;
+      let currentItemAmount = $orders[i].amount;
+      let currentItemTotal = currentItemPrice * currentItemAmount;
+      total += currentItemTotal;
+    }
+    const $span = document.querySelector(`.total__price`);
+    $span.innerHTML = `&euro; <span>${total}</span>`;
   }
 
   const fetchJSON = () => {
@@ -122,6 +136,7 @@
       const removes = document.querySelectorAll(`.remove`);
       removes.forEach($delete => $delete.addEventListener('click', handleClickRemove));
       console.log($orders);
+      loadTotal();
     });
 
   };
@@ -143,6 +158,8 @@
       console.log($index);
       $orders.splice($index, 1);
       makeOrders();
+      checkEmptyState();
+      loadTotal();
     }
   };
 
@@ -152,6 +169,8 @@
 
   const init = () => {
     fetchJSON();
+    checkEmptyState();
+    loadTotal();
 
   };
 
