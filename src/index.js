@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
 {
 import './style.css';
 import './js/script.js';
