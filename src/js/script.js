@@ -1,6 +1,7 @@
 {
   const $orders = [];
 
+
   const checkEmptyState = () => {
   if (typeof $orders == 'undefined' || $orders.length <= 0) {
     const $orderList = document.querySelector('.orders');
@@ -33,19 +34,15 @@
     $span.innerHTML = `&euro; <span>${total}</span>`;
   }
 
-  const fetchJSON = () => {
-    fetch('../src/assets/data/coffees.json')
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        const coffees = data.coffees.filter(function(coffee) {
-          return coffee.plantbased;
-        });
-        loadPrices(coffees, 5);
-      })
-      .catch(err => {});
-  };
+  const fetchJSON = async () => {
+
+    const response = await fetch(`https://api.myjson.com/bins/tcmfq`);
+    const data = await response.json();
+    const coffees = data.coffees.filter(function(coffee) {
+      return coffee.plantbased;
+    });
+    loadPrices(coffees, 5);
+  }
 
   const loadPrices = (coffees, count) => {
     for (let i = 0;i <= count - 1;i ++) {
@@ -135,7 +132,6 @@
       $orderList.appendChild($li);
       const removes = document.querySelectorAll(`.remove`);
       removes.forEach($delete => $delete.addEventListener('click', handleClickRemove));
-      console.log($orders);
       loadTotal();
     });
 
