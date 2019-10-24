@@ -8,8 +8,8 @@
       const $div = document.createElement(`div`);
       $div.classList.add(`emptystate`);
       $div.innerHTML =`
-      <img srcset="./src/assets/img/coffee-maker.jpg 67w,
-        ./src/assets/img/coffee-maker@2x.jpg 134w" sizes="67px" src="./src/assets/img/coffee-maker.jpg" alt="A coffee maker">
+      <img srcset="../assets/img/coffee-maker.jpg 67w,
+        ../assets/img/coffee-maker@2x.jpg 134w" sizes="67px" src="../assets/img/coffee-maker.jpg" alt="A coffee maker">
 
       <span class="emptystate__content">
         Please order something
